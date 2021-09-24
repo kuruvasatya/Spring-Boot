@@ -20,6 +20,9 @@
 ## Spring Boot Starter Parent dependency
 - spring boot follows **Convention Over Configuration**
 - so we get all the configuration into our application by inheriting the parent class dependency shown below, you can also get it in maven repo
+- What <parent> does is it tells what jars to pull when a dependency is added
+- Suppose if we add Spring-boot-starter-web dependency <parent> tells which all jars and its versions are required for it
+	
 ```xml
 <parent>
     <groupId>org.springframework.boot</groupId>
