@@ -46,3 +46,6 @@
 	2. Starts Spring application Context
 	3. Perform class path scan => in its sub-packages, example if your main file is in com.demo then its starts component scan in com.demo.*
 	4. Strarts Tomcat, create servlet container, host application, make it available
+	
+# Interview Questions
+1. What is difference between webservice and webapplication?
