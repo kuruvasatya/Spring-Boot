@@ -17,3 +17,12 @@
 	<artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 ```
+
+
+## Booting Application
+- Annotate main class with @SpringBootApplication
+- SpringApplication.run(Class, args);
+	1. Sets up default configurations
+	2. Starts Spring application Context
+	3. Perform class path scan
+	4. Strarts Tomcat, create servlet container, host application, make it available
