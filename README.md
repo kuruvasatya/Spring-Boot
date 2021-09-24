@@ -8,7 +8,12 @@
 - @RestController
 - @RequestMapping -> generic mapping to any HTTP request
 - @GetMapping -> To fetch json data
+	- @GetMapping("/hello/{id}") => dynamic data
+- @PathVariable()
+	- method(@PathVariable("id") String id)
 - @PostMapping -> TO post data
+- @RequestBody
+	- method(@RequestBody Class_name object_name) => all the data through post will be added into that object
 - @DeleteMapping -> To delete record
 - @PutMapping -> to Updata data
 
