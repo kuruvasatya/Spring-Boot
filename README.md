@@ -16,6 +16,12 @@
 	- method(@RequestBody Class_name object_name) => all the data through post will be added into that object
 - @DeleteMapping -> To delete record
 - @PutMapping -> to Updata data
+- @Query(hql_query)
+- @Query(value="sql_query, nativeQuery=true)
+- Passing dynamic parameters to query
+	- @Query("select e from Employee e where e.salary>:sal)
+	- public void method_name(@Param("sal") long salary){}
+- @Modifying -> placed on top of @Query if the query is update/delete
 
 ## Spring Boot Starter Parent dependency
 - spring boot follows **Convention Over Configuration**
