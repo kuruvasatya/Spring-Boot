@@ -16,6 +16,6 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 	@Query("select distinct s.bloodGroup from Student s")
 	List<String> findDistictByBloodGroup();
 
-
-
+	List<Student> findStudentByState(String state);
+	
 }

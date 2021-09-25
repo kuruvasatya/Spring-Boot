@@ -34,6 +34,10 @@ public class StudentService {
 	public List<String> getAllBloodTypes() {
 		return studentRepo.findDistictByBloodGroup();
 	}
+
+	public List<Student> getStudentInState(String state) {
+		return studentRepo.findStudentByState(state);
+	}
 	
 	
 

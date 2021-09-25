@@ -48,9 +48,17 @@ public class StudentController {
 		return service.findDonar(bloodGroup);
 	}
 	
+	@GetMapping("state/{state}")
+	public List<Student>getStudentBelongingToState(@PathVariable("state") String state)
+	{
+		return service.getStudentInState(state);
+	}
+	
 	@GetMapping("/blood")
 	public List<String> getBloodGroupsAvailable()
 	{
 		return service.getAllBloodTypes();
 	}
+
+	
 }
