@@ -52,7 +52,7 @@
 	2. Starts Spring application Context
 	3. Perform class path scan => in its sub-packages, example if your main file is in com.demo then its starts component scan in com.demo.*
 	4. Strarts Tomcat, create servlet container, host application, make it available
-	
+
 ## application.properties file template
 
 ```xml
@@ -63,7 +63,42 @@ spring.datasource.password=root
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.hibernate.ddl-auto=update
 ```
+## JPA method
+- save(entity)
+- delete(entity)
+- deleteAll()
+- deleteById()
+- findAll()
+- findAll(Sort.by("")
+- findAll(Sort.by(Sort.Direction.Asc,"")
+- findById()
 	
+## Structured methods
+- find...By...    example: findUserByFirstName / findByFirstName
+- delete...By...
+- findTop3By....
+- findDistinceBy....
+- findBy...or...  example findUserByFirstNameOrLastName
+- findBy...And...
+- findBy...OrderBy...Asc
+	
+## Query Annotation
+mentioned in annotation section
+	
+	
+	
+## common mistakes
+- if main class (class with main method) is present in com.demo package then the controllers and the entity class should be present in the subpackage of com.demo that is in com.demo.* => example com.demo.entity
+- when there is relationship between two entites in your class make sure the getter and setters are kept accordingly to overcome infinite loops
+- Optional return type implies there is a chance that requesting object is not present
+	```java
+	Optional<Student> student = service.getStudent(id);
+		if(student.isPresent()) {
+			return student.get();
+		}
+		else 
+			return null;
+	```
 	
 # Interview Questions
 1. What is difference between webservice and webapplication?
