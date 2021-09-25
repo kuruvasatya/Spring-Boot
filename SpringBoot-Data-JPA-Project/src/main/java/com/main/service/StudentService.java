@@ -30,6 +30,10 @@ public class StudentService {
 		return studentRepo.findDonar(bloodGroup);
 		
 	}
+
+	public List<String> getAllBloodTypes() {
+		return studentRepo.findDistictByBloodGroup();
+	}
 	
 	
 

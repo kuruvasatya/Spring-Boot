@@ -35,9 +35,9 @@ public class DepartmentController {
 		return "There are " + count + " departments";
 	}
 	
-	@GetMapping("{id}/students")
-	public List<Student> getStudentsInDepartment(@PathVariable("id") int id){
-		return service.getStudentsInDepartment(id);
+	@GetMapping("{name}/students")
+	public List<Student> getStudentsInDepartment(@PathVariable("name") String name){
+		return service.getStudentsInDepartment(name);
 	}
 	
 	@GetMapping("/{name}")

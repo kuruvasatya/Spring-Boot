@@ -42,8 +42,9 @@ public class DepartmentService {
 		departmentRepo.deleteByName(name);
 	}
 
-	public List<Student> getStudentsInDepartment(int id) {
-		return departmentRepo.getAllStudentsInDept(id);
+	public List<Student> getStudentsInDepartment(String name) {
+		return departmentRepo.findByName(name).getStudents();
+		
 	}
 	
 	

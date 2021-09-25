@@ -47,4 +47,10 @@ public class StudentController {
 	{
 		return service.findDonar(bloodGroup);
 	}
+	
+	@GetMapping("/blood")
+	public List<String> getBloodGroupsAvailable()
+	{
+		return service.getAllBloodTypes();
+	}
 }

@@ -15,7 +15,7 @@ public interface DepartmentRepository extends JpaRepository<Department, Integer>
 
 	void deleteByName(String name);
 
-	@Query(value="select e from Student e inner join e.department d where d.id=:id")
-	List<Student> getAllStudentsInDept(@Param("id") int id);
+	//@Query(value="select e from Student e inner join e.department d where d.id=:id")
+	//List<Student> getAllStudentsInDept(@Param("id") int id);
 
 }

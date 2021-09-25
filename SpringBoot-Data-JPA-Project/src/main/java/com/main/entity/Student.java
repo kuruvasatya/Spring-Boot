@@ -6,11 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-
 
 @Entity
 public class Student {
@@ -20,20 +15,18 @@ public class Student {
 	String bloodGroup;
 	String city;
 	String state;
-	@ManyToOne
-	Department department;
-	
+
 	public Student() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(String name, String bloodGroup, String city, String state, Department department) {
+	public Student(int id, String name, String bloodGroup, String city, String state) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.bloodGroup = bloodGroup;
 		this.city = city;
 		this.state = state;
-		this.department = department;
 	}
 
 	public int getId() {
@@ -76,13 +69,10 @@ public class Student {
 		this.state = state;
 	}
 
-	public Department getDepartment() {
-		return department;
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", bloodGroup=" + bloodGroup + ", city=" + city + ", state="
+				+ state + "]";
 	}
 
-	public void setDepartment(Department department) {
-		this.department = department;
-	}
-
-	
 }
