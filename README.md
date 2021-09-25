@@ -53,5 +53,17 @@
 	3. Perform class path scan => in its sub-packages, example if your main file is in com.demo then its starts component scan in com.demo.*
 	4. Strarts Tomcat, create servlet container, host application, make it available
 	
+## application.properties file template
+
+```xml
+server.port=8080
+spring.datasource.url= jdbc:mysql://localhost:3307/SpringBootDataJpa
+spring.datasource.username=root
+spring.datasource.password=root
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.hibernate.ddl-auto=update
+```
+	
+	
 # Interview Questions
 1. What is difference between webservice and webapplication?
