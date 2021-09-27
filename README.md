@@ -22,6 +22,14 @@
 	- @Query("select e from Employee e where e.salary>:sal)
 	- public void method_name(@Param("sal") long salary){}
 - @Modifying -> placed on top of @Query if the query is update/delete
+- @MappedSuperClass => used in place of @Entity, It doesnt create a table in the database instead all its properites are added into sub class entity tables
+- @CreatedBy
+- @CreatedDate
+- @LastModifiedBy
+- @LastModifiedDate
+- @Audited
+- @EnableJpaAuditing
+- @entityListner(AuditingEntityListner.Class)
 
 ## Spring Boot Starter Parent dependency
 - spring boot follows **Convention Over Configuration**
@@ -86,6 +94,16 @@ spring.jpa.hibernate.ddl-auto=update
 mentioned in annotation section
 	
 	
+## Auditing in Spring boot
+- Tracking or inspecting the changes made on persisted data
+- @CreatedBy
+- @LastModifiedBy
+- @CreatedDate
+- @LastModifiedDate
+- createdBy, LastModified by are managed by security, by getting who is the curret user logged in
+- CreatedDate and LastModifiedDate are managed by entity call back lister for that you need to annotate the entity class with
+	@EventListner(AuditingEntityListener.Class)
+- To enable auditing we need to annotate main class with @EnableJpaAuditing
 	
 ## common mistakes
 - if main class (class with main method) is present in com.demo package then the controllers and the entity class should be present in the subpackage of com.demo that is in com.demo.* => example com.demo.entity
